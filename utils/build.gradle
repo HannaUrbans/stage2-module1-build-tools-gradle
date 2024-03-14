@@ -15,7 +15,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'by.example.utils'
-            artifactID = 'myExampleUtils'
+            artifactId = 'myExampleUtils'
             version = '1.0.0'
 
             from components.java
