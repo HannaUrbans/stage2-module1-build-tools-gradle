@@ -1,7 +1,37 @@
-//add everything here
+plugins{
+    id 'java-library'
+    id 'maven-publish'
+}
+repositories{
+    mavenCentral()
+}
+publishing{
+    publications{
+        maven (MavenPublication)
+                {
+                    groupId = 'by.example.demo'
+                    artifactID = 'myExampleDemo'
+                    version = '1.0.0'
+                                    from components.java
+                }
+    }
+}
+
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.1')
+}
+
+jar {
+    manifest {
+        attributes( 'Implementation-Title': 'My Library', 'Implementation-Version': '1.0.0' )
+    }
+}
 
 test {
     useJUnitPlatform()
 }
 
 compileJava {}.dependsOn(':utils:publishToMavenLocal')
+
+
