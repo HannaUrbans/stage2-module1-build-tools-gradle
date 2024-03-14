@@ -8,7 +8,7 @@ public class StringUtils {
              else {return false;}
 
          }
-         catch (NumberFormatException e | NullPointerException e) )
+         catch (NumberFormatException e | NullPointerException e)
          {return false;}
     }
 }
