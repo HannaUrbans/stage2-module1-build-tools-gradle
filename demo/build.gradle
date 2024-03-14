@@ -10,7 +10,7 @@ publishing{
         maven (MavenPublication)
                 {
                     groupId = 'by.example.demo'
-                    artifactID = 'myExampleDemo'
+                    artifactId = 'myExampleDemo'
                     version = '1.0.0'
                                     from components.java
                 }
