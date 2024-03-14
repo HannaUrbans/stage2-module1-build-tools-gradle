@@ -12,7 +12,7 @@ public class Utils {
             break;
             }}
        return result;}
-        catch (NumberFormatException e)
+        catch (NumberFormatException e | NullPointerException e) )
         {return false;}
     }
 }
