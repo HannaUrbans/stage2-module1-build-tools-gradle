@@ -4,14 +4,16 @@ import java.util.List;
 
 public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
-        boolean result = true;
+        try {boolean result = true;
         for (String elem : args) {
-            int number = Integer.parseInt(elem);
+            double number = Double.parseDouble(elem);
             if (number<=0)
         {result = false;
             break;
             }}
-       return result;
+       return result;}
+        catch (NumberFormatException e)
+        {return false;}
     }
 }
 
